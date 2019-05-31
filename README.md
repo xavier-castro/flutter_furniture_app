@@ -1,16 +1,11 @@
 # flutter_furniture_app
 
-A new Flutter project.
+<p align="center">
+    <img src="./assets/readme_image01.png">
+</p>
 
-## Getting Started
+## Source
 
-This project is a starting point for a Flutter application.
+I made this app by following a guide, the original creator is Devefy in youtube, [here is the video](https://www.youtube.com/watch?v=1VLr5NqUSTE&t=29s)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Design credit Source [Dribbble Link](https://dribbble.com/shots/6091625-Furniture-mobile-app)
