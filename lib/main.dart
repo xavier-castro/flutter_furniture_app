@@ -13,6 +13,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  int _currentIndex = 0;
+
   Widget _buildGradientContainer(double width, double height) {
     return Align(
       alignment: Alignment.topRight,
@@ -132,15 +134,32 @@ class _MyAppState extends State<MyApp> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: <Widget>[
-                                          Text(
-                                            title[index],
-                                            style: TextStyle(
-                                                fontSize: 12.0,
-                                                fontFamily: "Montserrat-Bold",
-                                                color: (index % 2 == 0)
-                                                    ? Color(0xFF2a2d3f)
-                                                    : Colors.white),
-                                          )
+                                          Text(title[index],
+                                              style: TextStyle(
+                                                  fontSize: 12.0,
+                                                  fontFamily: "Montserrat-Bold",
+                                                  color: (index % 2 == 0)
+                                                      ? Color(0xFF2a2d3f)
+                                                      : Colors.white)),
+                                          SizedBox(
+                                            height: 8.0,
+                                          ),
+                                          Text("NEW SELL",
+                                              style: TextStyle(
+                                                  fontSize: 12.0,
+                                                  fontFamily:
+                                                      "Montserrat-Medium",
+                                                  color: (index % 2 == 0)
+                                                      ? Color(0xFF2a2d3f)
+                                                      : Colors.white)),
+                                          SizedBox(height: 50.0),
+                                          Text(price[index] + " \$",
+                                              style: TextStyle(
+                                                  fontSize: 30.0,
+                                                  fontFamily: "Montserrat-Bold",
+                                                  color: (index % 2 == 0)
+                                                      ? Color(0xFF2a2d3f)
+                                                      : Colors.white)),
                                         ],
                                       ),
                                     )
@@ -157,6 +176,26 @@ class _MyAppState extends State<MyApp> {
           );
         },
       ),
+      bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colors.black,
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          currentIndex: _currentIndex,
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.panorama_horizontal),
+                title: Container(
+                  height: 0.0,
+                )),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.bookmark_border),
+                title: Container(
+                  height: 0.0,
+                )),
+          ]),
     );
   }
 }
