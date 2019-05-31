@@ -114,6 +114,37 @@ class _MyAppState extends State<MyApp> {
                                         borderRadius:
                                             BorderRadius.circular(12.0)),
                                   ),
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Image.asset(
+                                      images[index],
+                                      width: 172.5,
+                                      height: 199.0,
+                                    ),
+                                    SizedBox(
+                                      height: 12.0,
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.all(12.0),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            title[index],
+                                            style: TextStyle(
+                                                fontSize: 12.0,
+                                                fontFamily: "Montserrat-Bold",
+                                                color: (index % 2 == 0)
+                                                    ? Color(0xFF2a2d3f)
+                                                    : Colors.white),
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
                                 )
                               ],
                             ),
