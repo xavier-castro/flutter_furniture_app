@@ -19,13 +19,14 @@ class _MyAppState extends State<MyApp> {
     return Align(
       alignment: Alignment.topRight,
       child: Container(
-        width: width,
-        height: height,
+        width: width * .8,
+        height: height / 2,
         decoration: BoxDecoration(
             gradient: LinearGradient(
                 colors: [Color(0xFFfbfcfd), Color(0xFFf2f3f8)],
                 begin: Alignment.topCenter,
-                end: Alignment.bottomCenter)),
+                end: Alignment.bottomCenter,
+                stops: [0.5, 1.0])),
       ),
     );
   }
@@ -72,7 +73,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      backgroundColor: Color(0xFFf23f8),
+      backgroundColor: Color(0xFFf2f3f8),
       body: LayoutBuilder(
         builder: (context, constraints) {
           var width = constraints.maxWidth;
@@ -211,6 +212,7 @@ class _MyAppState extends State<MyApp> {
         child: RawMaterialButton(
           shape: CircleBorder(),
           child: Icon(Icons.add, size: 35.0, color: Colors.white),
+          onPressed: () {},
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
