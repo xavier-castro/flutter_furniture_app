@@ -17,8 +17,8 @@ class _MyAppState extends State<MyApp> {
     return Align(
       alignment: Alignment.topRight,
       child: Container(
-        width: width * .8,
-        height: height / 2,
+        width: width,
+        height: height,
         decoration: BoxDecoration(
             gradient: LinearGradient(
                 colors: [Color(0xFFfbfcfd), Color(0xFFf2f3f8)],
